@@ -42,3 +42,7 @@ In a new terminal type:
 5. Scan the QR Code with your mobile phone
 
 After completing these steps, you should be able to test your mobile app
+
+
+## AI-Assisted Documentation: Automated Security Scanning 
+Automated Security Scanning with GitHub Actions and OWASP ZAP: This project integrates OWASP ZAP into the CI/CD pipeline as a dedicated zap_scan job that runs automatically on every push to the main branch, using the zaproxy/action-baseline@v0.12.0 action with a containerized ZAP instance (ghcr.io/zaproxy/zaproxy:stable). The job performs a baseline scan againstzapproxy.org, the ZAP website, and applies a custom rules file (.zap/rules.tsv) to tune which alerts are reported, filing the results as a ZAP Scan Baseline Report in the repository's Issues tab. When  shifting security testing earlier into the automated build process, we continuously uncover vulnerabilities during development instead of finding them after deployment. This proactive approach is key to creating a Smart and Secure System.
